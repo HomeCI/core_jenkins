@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: "\n\nDemo setup for Jenkins Configuration as Code plugin......\n\n"
+  systemMessage: "\n\nHomeCI Jenkins\n\n"
 
   numExecutors: 1
   mode: NORMAL

@@ -2,8 +2,9 @@ version: '3.3'
 
 services:
   jenkins:
-    build:
-      context: ./master
+    #build:
+    #  context: ./master
+    image: alpeza/jenkins:1.0.0
     ports:
       - 8080:8080
       - 50000:50000
