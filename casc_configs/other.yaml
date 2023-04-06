@@ -1,0 +1,20 @@
+unclassified:
+  themeManager:
+    disableUserThemes: true
+    theme: "darkSystem" # use 'dark' for forcing the dark theme regardless of OS settings
+
+  location:
+    url: http://localhost
+    adminAddress: admin@admin.com
+
+  globalLibraries:
+    libraries:
+      - name: "hci"
+        implicit: true
+        defaultVersion: "main"
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: "https://github.com/HomeCI/jenkins.git"
+                

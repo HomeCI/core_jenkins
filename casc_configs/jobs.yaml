@@ -1,0 +1,37 @@
+jobs:
+  - script: |
+      freeStyleJob('seedjob'){
+        description("Generates the pipelines from a GitHubbRepo")
+        parameters {
+            gitParameter {
+                description('Seleccione la rama que desea desplegar')
+                name('BRANCHSPEC')
+                type('PT_BRANCH_TAG')
+                defaultValue('main')
+                branch('')
+                branchFilter('*')
+                tagFilter('*')
+                sortMode('ASCENDING_SMART')
+                selectedValue('DEFAULT')
+                useRepository("https://github.com/HomeCI/jenkins.git")
+                quickFilterEnabled(false)
+            }
+        }
+        scm {
+            git {
+              remote {
+                  url('https://github.com/HomeCI/jenkins.git')
+              }
+              branch('$BRANCHSPEC')
+            }
+        }
+
+        steps {
+            shell('mkdir -p /var/jenkins_home/version')
+            shell('echo "$BRANCHSPEC" > /var/jenkins_home/version/version.txt')
+            jobDsl {
+                targets('*.groovy')
+            }
+          }
+      }
+

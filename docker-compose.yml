@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  jenkins:
+    build:
+      context: ./master
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - jenkins_home_summit:/var/jenkins_home
+      - ./casc_configs:/var/jenkins_conf
+      - /var/run/docker.sock:/var/run/docker.sock
+    secrets:
+      - github
+      - adminpw
+      - dockerhub
+    environment:
+      - CASC_JENKINS_CONFIG=/var/jenkins_conf
+secrets:
+  #Be careful with newlines in your secrets, make sure to remove them before running docker-compose up.
+  github:
+    file: secrets/github
+  adminpw:
+    file: secrets/adminpw
+  dockerhub:
+    file: secrets/dockerhub
+volumes:
+  jenkins_home_summit:
