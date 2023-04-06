@@ -1,5 +1,6 @@
 #!/bin/bash
 source .env
+git add -A; git commit -m "update"; git push
 # Configuración de variables
 IMAGE_NAME="jenkins"
 IMAGE_TAG="1.0.0"

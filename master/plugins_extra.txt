@@ -95,3 +95,4 @@ mask-passwords:2.12.0
 pipeline-model-declarative-agent:1.1.1
 strict-crumb-issuer:2.1.0
 envinject:1.93
+generic-webhook-trigger:1.86.2
