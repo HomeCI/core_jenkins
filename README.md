@@ -1,4 +1,5 @@
-# praqma-jenkins-casc
+# Core Jenkins
+
 Repository for our JCasC demo setup.
 
 ## Requirements
