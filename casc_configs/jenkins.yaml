@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: "\n\nHomeCI Jenkins 🔥\n\n"
+  systemMessage: "\n\n🚀 HomeCI Jenkins 🚀\n\n"
 
   numExecutors: 10
   mode: NORMAL
