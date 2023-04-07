@@ -9,12 +9,12 @@ jobs:
                 type('PT_BRANCH_TAG')
                 defaultValue('main')
                 branch('')
-                branchFilter('*')
-                tagFilter('*')
+                branchFilter('.*')
+                tagFilter('.*')
                 sortMode('ASCENDING_SMART')
                 selectedValue('DEFAULT')
                 useRepository("https://github.com/HomeCI/jenkins.git")
-                quickFilterEnabled(false)
+                quickFilterEnabled(true)
             }
         }
         scm {

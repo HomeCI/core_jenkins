@@ -1,7 +1,7 @@
 jenkins:
-  systemMessage: "\n\nHomeCI Jenkins\n\n"
+  systemMessage: "\n\nHomeCI Jenkins 🔥\n\n"
 
-  numExecutors: 1
+  numExecutors: 10
   mode: NORMAL
   scmCheckoutRetryCount: 3
   labelString: "master"  
