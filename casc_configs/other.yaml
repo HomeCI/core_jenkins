@@ -4,7 +4,7 @@ unclassified:
     theme: "dark" 
 
   location:
-    url: http://localhost
+    url: http://localhost:8080
     adminAddress: admin@admin.com
 
   globalLibraries:
