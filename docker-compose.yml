@@ -5,6 +5,7 @@ services:
     #build:
     #  context: ./master
     image: alpeza/jenkins:1.0.0
+    restart: unless-stopped
     ports:
       - 8080:8080
       - 50000:50000
@@ -19,6 +20,7 @@ services:
       - dockerhub
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_conf
+      - REPO_PATH=/home
 secrets:
   #Be careful with newlines in your secrets, make sure to remove them before running docker-compose up.
   github:
