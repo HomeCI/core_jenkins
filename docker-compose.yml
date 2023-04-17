@@ -21,6 +21,8 @@ services:
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_conf
       - REPO_PATH=/home
+    networks:
+      - core_npm_hcinet
 secrets:
   #Be careful with newlines in your secrets, make sure to remove them before running docker-compose up.
   github:
@@ -31,3 +33,8 @@ secrets:
     file: secrets/dockerhub
 volumes:
   jenkins_home_summit:
+
+
+networks:
+  core_npm_hcinet:
+    external: true
